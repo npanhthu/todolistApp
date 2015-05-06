@@ -3,10 +3,10 @@ A Node app built with Nodejs, MongoDB and Angular
 
 Installation
 
-Clone the repository: git clone https://github.com/npanhthu/todolistApp
+1. Clone the repository: git clone https://github.com/npanhthu/todolistApp
 
-Install the application: npm install
+2. Install the application: npm install
 
-Start the server: node app.js
+3. Start the server: node app.js
 
-View in browser at http://localhost:3000
+4. View in browser at http://localhost:3000
