@@ -1,0 +1,30 @@
+<div class="container">
+	<a href="#/" ng-click="logout()">Logout</a>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>TODOLIST</th>
+				<th></th>
+				<th>
+     				Search: <input type="text" class="form-control" placeholder="Search" ng-model="query">
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><td><button class="btn btn-success" ng-click="alldone()">All Done</button></td></td>
+				<td><input class="form-control" placeholder="Add a new task" ng-model="tasks.task"></td>
+			<!--	<td><input type="text" data-beatpicker="false" ng-model="tasks.date" data-beatpicker-format="['MM','DD','YYYY'],separator:'-'" /></td> -->
+				<td><button class="btn btn-primary" ng-click="addNewTask()">Add</button></td>
+				<td><button class="btn btn-info" ng-click="update()">Update</button></td>
+			</tr>
+			<tr ng-repeat="tasks in tastlist | filter:query">
+				<td></td>
+				<td><button class="btn btn-success" ng-click="donetask(tasks._id)">Done</button></td>
+				<td>{{tasks.task + " ---(CreateTime: " + tasks.dateinfo.CreateTime + ")---"}}</td>
+				<td><button class="btn btn-danger" ng-click="remove(tasks._id)">Remove</button></td>
+				<td><button class="btn btn-warning" ng-click="edit(tasks._id)">Edit</button></td>
+			</tr>
+		</tbody>	
+	</table>
+</div>

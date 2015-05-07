@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="TodolistApp">
+  <head>
+    <title><%= title %></title>
+   <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap-theme.min.css">
+    <script type="text/javascript" src="/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/angular/angular-resource.min.js"></script>
+    <script type="text/javascript" src="/angular/angular-route.min.js"></script>
+    <link rel="stylesheet" href="/style/reset.css"/>
+    <link rel="stylesheet" href="/style/demos.css"/>
+<link rel="stylesheet" href="style/login.css">
+  
+    <script src="controllers/app.js"></script>
+  <body>
+    <div class="container">
+	Welcome to Todo app.
+      <ul class="nav nav-pills">
+       <li role="presentation" class="active"><a href="/#/home">Home</a></li>
+       <li role="presentation"><a href="/#/task">Todo List</a></li>
+       <li role="presentation"><a href="/#/completed">Completed</a></li>
+      </ul>
+    </div>
+  	{{message}}
+    <ng-view></ng-view>
+  </body>
+</html>
